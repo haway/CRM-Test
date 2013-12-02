@@ -29,8 +29,21 @@ $jconfig = {
 
 print $jconfig->{'logdir'}, "\n";
 
-my $jj = XMLin( '2xml.simple', KeyAttr => { server => 'sn' });
-
+my $jj = XMLin( '2xml.simple', 
+		KeyAttr => { server => 'id' },
+		ForceArray => [ 'ip', 'use', 'owner' ] );
 
 print Dumper( $jj );
+
+foreach my $sn ( sort keys $$jj{'server'} ){
+	print $sn, "\n";
+	PrintOwner( $jj->{'server'}->{ $sn } );
+}
+
+
+sub PrintOwner{
+	my @Owner = @_;
+	print Dumper( @Owner );
+
+}
 
