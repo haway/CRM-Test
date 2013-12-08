@@ -1,0 +1,14 @@
+<post>
+	<server id="2" rask="機櫃1" product='Asus' model='RS700-XP/PS4' post='false'>
+    	<owner>HaWay</owner>
+    	<owner>markkao</owner>
+    	<ip>192.168.1.1</ip>
+    	<ip>211.72.210.250</ip>
+    	<use>ipcal</use>
+    	<use>mail server</use>
+		<startu>2U</startu>
+		<endu>4U</endu>
+    	<no>JU11122334</no>
+		<part>front</part>
+	</server>
+</post>

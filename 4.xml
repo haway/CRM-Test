@@ -1,0 +1,10 @@
+<post>
+	<server id="4" rask="機櫃1" product='Dell' model='D100' post='false'>
+    	<owner>HaWay</owner>
+    	<ip>211.72.211.68</ip>
+    	<use>storage</use>
+		<startu>9U</startu>
+		<endu>9U</endu>
+		<part>real</part>
+	</server>
+</post>

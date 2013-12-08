@@ -1,0 +1,12 @@
+<post>
+	<server id="5" rask="機櫃1" product='HP' model='7J555' post='false'>
+    	<owner>Bubble</owner>
+    	<ip>211.72.211.8</ip>
+    	<use>personnal.twnic.net.tw</use>
+		<startu>5U</startu>
+		<endu>5U</endu>
+		<part>middle</part>
+	</server>
+</post>
+
+

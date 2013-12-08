@@ -3,6 +3,8 @@
 use Data::Dumper;
 use XML::Simple;
 
+
+
 my %jconfig;
 
 $jconfig = {
@@ -27,23 +29,31 @@ $jconfig = {
       }
 };
 
-print $jconfig->{'logdir'}, "\n";
+#print $jconfig->{'logdir'}, "\n";
 
-my $jj = XMLin( '2xml.simple', 
+$file = shift;
+
+my $jj = XMLin( "$file", 
 		KeyAttr => { server => 'id' },
 		ForceArray => [ 'ip', 'use', 'owner' ] );
 
 print Dumper( $jj );
 
+=head1
 foreach my $sn ( sort keys $$jj{'server'} ){
-	print $sn, "\n";
-	PrintOwner( $jj->{'server'}->{ $sn } );
+	#print $sn, "\n";
+	PrintOwner( $jj->{'server'}->{ $sn }[0] );
 }
-
 
 sub PrintOwner{
-	my @Owner = @_;
-	print Dumper( @Owner );
-
+	my $Owner = @_;
+	print Dumper( $Owner );
+	print "ab $Owner{'owner'}[0]";
+	#print "cc $Owner[0]{'owner'}[0]";
 }
+=cut
+
+print "AAA\n";
+print $jj->{server}->{11}->{startu};
+print "AAA\n";
 
